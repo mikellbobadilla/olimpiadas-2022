@@ -1,32 +1,32 @@
 const { Model, DataTypes } = require("sequelize");
 const { sequelize } = require("../db/sequelize");
 
-class User extends Model {}
+class Articulo extends Model {}
 
-User.init(
+Articulo.init(
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    titulo: {
       type: DataTypes.STRING(50),
       allowNull: false,
       unique: true,
     },
-    password: {
-      type: DataTypes.STRING(50),
+    descripcion: {
+      type: DataTypes.STRING(200),
       allowNull: false,
     },
   },
   {
     sequelize,
-    modelName: "users",
+    modelName: "articulos",
     timestamps: false,
     createdAt: false,
     updatedAt: false,
   }
 );
 
-module.exports = { User };
+module.exports = { Articulo };
