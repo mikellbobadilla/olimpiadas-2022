@@ -1,10 +1,16 @@
 const { Sequelize } = require('sequelize')
+const { 
+  database,
+  host, 
+  user,
+  pass
+} = require('../config/config')
 
 exports.sequelize = new Sequelize(
-  process.env.DB,
-  process.env.USER,
-  process.env.PASSWORD,{
-    host: process.env.HOST,
+  database,
+  user,
+  pass,{
+    host: host,
     dialect: 'mysql'
   }
 )
