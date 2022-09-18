@@ -14,7 +14,7 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/users/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     .bd-placeholder-img {
@@ -34,22 +34,22 @@
 
 
   <!-- Custom styles for this template -->
-  <link href="assets/dist/css/signin.css" rel="stylesheet">
+  <link href="/users/assets/dist/css/signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
 
   <main class="form-signin">
-    <form action="/login" method="post">
-      <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <form action="/users/login" method="post">
+      <img class="mb-4" src="/users/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
 
       <div class="form-floating">
-        <input type="text" class="form-control" id="username" placeholder="name">
+        <input type="text" class="form-control" id="username" placeholder="name" name="username">
         <label for="username">Username</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="password" placeholder="Password">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
         <label for="password">Password</label>
       </div>
       <a href="/register" class="mt-4 mb-4 w-100" tabindex="-1" role="button" aria-disabled="true">

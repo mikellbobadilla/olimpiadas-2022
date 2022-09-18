@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
-const { 
+const {
   database,
-  host, 
+  host,
   user,
   pass
 } = require('../config/config')
@@ -9,8 +9,8 @@ const {
 exports.sequelize = new Sequelize(
   database,
   user,
-  pass,{
-    host: host,
-    dialect: 'mysql'
-  }
+  pass, {
+  host: host,
+  dialect: 'mysql'
+}
 )
