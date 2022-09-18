@@ -1,22 +1,23 @@
+const path = require('path')
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const cors = require('cors')
 const {
-  hasAuthenticate,
-} = require('./util/jwt')
+  hasAuthenticate
+} = require('./src/util/jwt')
 
 const PORT = process.env.PORT || 3000
 
 // Mapping Routes
-const user = require('./routes/router-user')
+const user = require('./src/routes/router-user')
 
 // instances
 const app = express()
 
 // dev log
 app.use(logger('dev'))
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
 app.use(cors())
 
@@ -32,6 +33,5 @@ app.get('/', hasAuthenticate, (req, res) => {
 app.use('/users', user)
 
 app.listen(PORT, () => {
-
   console.log(`Server listening on http://localhost${PORT}`);
 })
