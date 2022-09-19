@@ -1,4 +1,4 @@
-<% include('./header.ejs') %>
+<% include('./header-form.ejs') %>
 
 
   <!-- Bootstrap core CSS -->
@@ -25,12 +25,12 @@
   <link href="/users/assets/dist/css/signin.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center bg-dark text-light">
 
     <main class="form-signin">
       <form action=<%=accion %> method="post">
         <img class="mb-4" src="/users/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">
+        <h1 class="h3 mb-4 fw-normal">
           <%= title %>
         </h1>
 
@@ -39,19 +39,21 @@
             <%= error_message %>
           </p>
           <% } %>
-            <div class="form-floating">
-              <input type="text" class="form-control" id="username" placeholder="name" name="username">
-              <label for="username">Username</label>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control bg-dark text-light" id="username" placeholder="name"
+                name="username">
+              <label for="username" class="text-light">Username</label>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-              <label for="password">Password</label>
+              <input type="password" class="form-control bg-dark text-light" id="password" placeholder="Password"
+                name="password">
+              <label for="password" class="text-light">Password</label>
             </div>
-            <a href=<%=url %> class="mt-4 mb-4 w-100" tabindex="-1" role="button" aria-disabled="true">
+            <a href=<%=url %> class="mt-4 mb-4w-100" tabindex="-1" role="button" aria-disabled="true">
               <%= message %>
             </a>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesion</button>
+            <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Iniciar sesion</button>
             <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
       </form>
     </main>
-    <% include('./footer.ejs') %>
+    <% include('./footer-form.ejs') %>

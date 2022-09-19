@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000
 
 // Mapping Routes
 const user = require('./src/routes/router-user')
-
+const museo = require('./src/routes/router-museo')
 // instances
 const app = express()
 
@@ -31,6 +31,7 @@ app.get('/', hasAuthenticate, (req, res) => {
 })
 
 app.use('/users', user)
+app.use('/museos', museo)
 
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost${PORT}`);

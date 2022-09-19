@@ -10,32 +10,28 @@ Museo.init({
         autoIncrement: true
     },
     nombre: {
-        type: DataTypes.STRING(50),
-        allowNull: false,
-        unique: true
+        type: DataTypes.STRING,
+        allowNull: false
     },
     direccion: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING,
         allowNull: false
     },
     telefono: {
-        type: DataTypes.STRING(50), 
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING,
         allowNull: false
     },
     descripcion: {
-        type: DataTypes.STRING(200),
+        type: DataTypes.STRING,
         allowNull: false
     },
-    id_horario: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'horarios',
-            key: 'id'
-        }
+    horario: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 }, {
     sequelize,

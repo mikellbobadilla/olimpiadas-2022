@@ -4,7 +4,6 @@ const { Museo } = require('../models/museo')
 const { User } = require('../models/user')
 const { Articulo } = require('../models/articulo')
 const { ArticuloGaleria } = require('../models/articulo_galeria')
-const { Horario } = require('../models/horarios')
 const { Galeria } = require('../models/galeria')
 
 
